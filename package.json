@@ -1,13 +1,15 @@
 {
   "name": "yandex-storage-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SDK for the Yandex cloud storage based on Amazon Simple Storage Service (Amazon S3)",
   "type": "module",
   "main": "./lib/YandexStorageSdk.js",
   "types": "./lib/YandexStorageSdk.d.ts",
+  "files": [
+    "lib/"
+  ],
   "scripts": {
     "prepare": "tsc -p tsconfig.json",
-    "start": "npm run prepare && node ./lib/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
