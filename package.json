@@ -1,0 +1,36 @@
+{
+  "name": "yandex-storage-sdk",
+  "version": "1.0.0",
+  "description": "SDK for the Yandex cloud storage based on Amazon Simple Storage Service (Amazon S3)",
+  "type": "module",
+  "main": "./lib/YandexStorageSdk.js",
+  "types": "./lib/YandexStorageSdk.d.ts",
+  "scripts": {
+    "prepare": "tsc -p tsconfig.json",
+    "start": "npm run prepare && node ./lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shashenko/yandex-storage-sdk.git"
+  },
+  "keywords": [
+    "yandex",
+    "cloud",
+    "storage",
+    "s3"
+  ],
+  "author": "Andrey Shashenko",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/shashenko/yandex-storage-sdk/issues"
+  },
+  "homepage": "https://github.com/shashenko/yandex-storage-sdk#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1290.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.4"
+  }
+}
