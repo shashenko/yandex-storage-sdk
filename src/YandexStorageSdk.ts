@@ -186,6 +186,6 @@ export default class YandexStorageSdk {
     }
 
     public getObjectPath({ Key }: { Key: string }): string {
-        return `${BASE_URL}/${Key}`
+        return `${BASE_URL}/${this.bucket}/${Key}`
     }
 }
