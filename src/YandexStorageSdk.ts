@@ -1,6 +1,7 @@
 import S3 from 'aws-sdk/clients/s3.js'
 import AWS from 'aws-sdk'
 const { Endpoint } = AWS
+const BASE_URL = 'https://storage.yandexcloud.net'
 
 export type AbortMultipartUploadParams = Omit<S3.AbortMultipartUploadRequest, 'Bucket'>
 export type CompleteMultipartUploadParams = Omit<S3.CompleteMultipartUploadRequest, 'Bucket'>
@@ -21,7 +22,7 @@ export default class YandexStorageSdk {
             this.setBucket(bucket)
         }
         this.s3 = new S3({
-            endpoint: new Endpoint('https://storage.yandexcloud.net'),
+            endpoint: new Endpoint(BASE_URL),
             credentials: { accessKeyId, secretAccessKey },
         })
     }
@@ -182,5 +183,9 @@ export default class YandexStorageSdk {
                 }
             })
         })
+    }
+
+    public getObjectPath({ Key }: { Key: string }): string {
+        return `${BASE_URL}/${Key}`
     }
 }
